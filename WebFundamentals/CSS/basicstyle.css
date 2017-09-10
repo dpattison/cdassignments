@@ -18,6 +18,10 @@ p {
     margin-bottom: 10px;
 }
 
+.code{
+    color: rgb(111,111,178);
+}
+
 #wrapper{
     width: 975px;
     background-color:rgb(16,53,91);
