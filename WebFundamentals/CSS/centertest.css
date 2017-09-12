@@ -1,0 +1,14 @@
+#wrapper{
+    width: 970px;
+    background-color: blue;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.center{
+    height: 200px;
+    width: 33%;
+    background-color: #222;
+    display: inline-block;
+}
