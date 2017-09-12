@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+#wrapper{
+width: 970px;
+height: 600px;
+background-color: blue;
+}
