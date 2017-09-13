@@ -1,51 +1,97 @@
 *{
     margin: 0px;
     padding: 0px;
-    color: white;
+    border: 1px solid red;
 }
 
 #top{
-width: 970px;
-height: 480px;
-background-color: #225577;
-}
-
-#header{
-    height: 140px;
+    width: 850px;
+    height: 435px;
+    background-color:rgb(38,81,117);
+    padding: 10px;
 }
 
 #top img{
-    margin: 20px;
-    display: inline-block;
-    vertical-align: top;
+display: inline-block;
+vertical-align: top;
+padding: 10px;
 }
 
-#header-right{
+#top-right{
     display: inline-block;
-    vertical-align: top;
-    text-align: right;
-    width: 575px;
-    height: 138px;
- 
+vertical-align: top;
+margin-left: 235px;
 }
 
-#greybox{
-    width: 300px;
-    height: 70px;
+#top-right h4{
+    color: white;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 100px;
+}
+
+.gbox{
+    width:260px;
+    height: 55px;
+    background-color: rgb(68,68,68);
     border-radius: 5px;
-    background-color: grey;
-    right: 0px;
-
+    margin-top: 7px;
 }
 
-#middle{
+#navbar{
+    width: 770px;
+    height: 45px;
+    background-color: rgb(74,128,171);
+    border-radius: 5px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+}
+
+#links{
+    height: 200px;
+    width: 180px;
+    margin-left: 65px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+    display: inline-block
+}
+
+#links ul{
+    margin-top: 10px;
+}
+
+#links li{
+    margin-bottom: 5px;
+}
+
+#content{
+    width: 580px;
+    height: 250px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px;
+}
+
+.italic{
+    font-style: italic;
+    margin: 10px;
+    font-size: 17px;
+    color: rgb(251,208,67)
+}
+
+#mid{
     width: 970px;
-    height: 220px;
-
+    height: 200px;
+    background-color: white;
 }
-
 #footer{
     width: 970px;
     height: 100px;
-    background-color: #225577;
+    background-color:rgb(38,81,117);    
 }
