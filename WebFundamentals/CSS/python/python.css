@@ -1,7 +1,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    border: 1px solid red;
 }
 
 #top{
@@ -45,6 +44,9 @@ margin-left: 235px;
     border-radius: 5px;
     margin-left: 65px;
     margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;  
 }
 
 #links{
@@ -143,5 +145,5 @@ margin-left: 235px;
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
