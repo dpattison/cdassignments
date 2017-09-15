@@ -30,12 +30,33 @@ margin-left: 235px;
     margin-left: 100px;
 }
 
+#top-right a{
+    color: rgb(251,208,67);
+}
+
 .gbox{
     width:260px;
-    height: 55px;
+    height: 35px;
     background-color: rgb(68,68,68);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 7px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#search{
+    height: 25px;
+    text-align: center;
+    color: grey;
+}
+
+#button{
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    background-color:rgb(38,81,117);
+    color: white;
 }
 
 #navbar{
@@ -99,7 +120,7 @@ margin-left: 235px;
     font-style: italic;
     margin: 10px;
     font-size: 17px;
-    color: rgb(251,208,67)
+    color: rgb(251,208,67);
 }
 
 #mid{
@@ -157,7 +178,8 @@ margin-left: 235px;
     background-color:rgb(38,81,117);
     padding: 10px;
     text-align: center;
-    color: rgb(137,186,227);    
+    color: rgb(137,186,227);
+    font-family: Arial, Helvetica, sans-serif;    
 }
 
 #footer h4{
@@ -166,5 +188,5 @@ margin-left: 235px;
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+  
 }
