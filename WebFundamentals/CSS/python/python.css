@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-weight: normal; 
 }
 
 #top{
@@ -47,6 +48,16 @@ margin-left: 235px;
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;  
+}
+
+#navbar h4{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 17px;
+    margin-left: 17px;
+    margin-top: 13px;
+    font-size: 19px;
+   
 }
 
 #links{
@@ -109,7 +120,7 @@ margin-left: 235px;
     width: 370px;
     vertical-align: top;
     display: inline-block;
-    border-top: 5px solid blue;
+    border-top: 5px solid rgb(117,168,211);
     margin-right: 10px;
 }
 
@@ -124,11 +135,21 @@ margin-left: 235px;
 
 .center h4{
     font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.center p{
+    margin-top: 5px;
 }
 
 .center ul{
     margin-left: 40px;
     margin-right: 10px;
+}
+
+.center a{
+    text-decoration: none;
 }
 #footer{
     width: 850px;
@@ -136,7 +157,7 @@ margin-left: 235px;
     background-color:rgb(38,81,117);
     padding: 10px;
     text-align: center;
-    color: white;    
+    color: rgb(137,186,227);    
 }
 
 #footer h4{
