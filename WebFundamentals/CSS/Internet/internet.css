@@ -92,19 +92,82 @@ border-radius: 5px;
 }
 #main{
 	width: 80%;
-	height: 500px;
 	display: inline-block;
 	vertical-align: top;
 }
 
-#main img{
+#home{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;
+	width: 100px;
+}
+#home img{
 width: 20px;
 display: inline-block;
-vertical-align: middle;
-margin-top: 0px;
+vertical-align: middle
 }
 
-#main h5{
+#home h5{
 	display: inline-block;
 	vertical-align: middle;
+}
+
+#contact{
+	margin-left: 450px;
+	display: inline-block;
+}
+
+#contact img{
+	display: inline-block;
+	margin-top: 5px;
+	width: 50px;
+
+}
+
+#phone {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+#phone p{
+	font-size: 10px;
+}
+ #phone h2{
+	 font-weight: bold;
+ }
+
+.lblue{
+	color: rgb(0,190,222)
+}
+
+#content{
+	width: 100%;
+	border-top: 1px solid grey;
+}
+
+.txt14{
+	font-size: 14px;
+}
+
+#clientserver{
+margin-left: 250px;
+	width: 250px;
+}
+
+#bottombox{
+height: 200px;
+	border: 3px solid rgb(0,130,223);
+}
+
+#bottombox img{
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+}
+
+#bottomtxt{
+	display: inline-block;
+	vertical-align: top;
 }
