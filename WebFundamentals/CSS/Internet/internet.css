@@ -3,6 +3,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	border: 1px solid red;
 	font-weight: normal;
+	margin: 0;
 }
 
 #wrapper{
@@ -20,7 +21,6 @@
 	width: 100px;
 	display: inline-block;
 	vertical-align: middle;
-	z-index: 1;
 }
 
 #header h1{
@@ -34,28 +34,77 @@ color: rgb(71,125,170);
 }
 
 #header h2{
-	position: absolute;
-	left: 10px;
-	top: 70px;
 	color: white;
 	width: 950px;
-	height: 30px;
 	padding: 10px;
 	background-color: rgb(71,125,170);
-	z-index: 2;
 	font-size: 25px;
 }
 
 #nav{
-	width:18%;
+	width:17%;
 	height: 500px;
 	display: inline-block;
 	vertical-align: top;
+	padding-right: 20px;
+	
 }
 
+.redtxt{
+	color: red;
+	font-weight: bold;
+}
+
+#nav h5{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#nav h6{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#nav img{
+	width: 100%;
+	color: white;
+}
+
+#video{
+width: 100%;
+color: white;
+background-color: rgb(71,125,170);
+padding: 5px;
+margin-bottom: 5px;
+border-radius: 5px;
+}
+
+#resources{
+	width: 100%;
+	background-color: rgb(240,123,6);
+	padding: 5px;
+	color: white;
+	margin-bottom: 20px;
+border-radius: 5px;
+
+}
 #main{
 	width: 80%;
 	height: 500px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+#main img{
+width: 20px;
+display: inline-block;
+vertical-align: middle;
+margin-top: 0px;
+}
+
+#main h5{
+	display: inline-block;
+	vertical-align: middle;
 }
