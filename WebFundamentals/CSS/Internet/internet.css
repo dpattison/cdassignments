@@ -1,7 +1,6 @@
 *{
 	
 	font-family: Arial, Helvetica, sans-serif;
-	border: 1px solid red;
 	font-weight: normal;
 	margin: 0;
 }
@@ -9,6 +8,7 @@
 #wrapper{
 	width: 970px;
 	height: 970px;
+	padding: 5px;
 	
 }
 
@@ -21,12 +21,13 @@
 	width: 100px;
 	display: inline-block;
 	vertical-align: middle;
+	position: relative;
+	z-index: 2;
 }
 
 #header h1{
 	display: inline-block;
 	font-size: 35px;
-
 }
 
 .bluetxt{
@@ -39,6 +40,9 @@ color: rgb(71,125,170);
 	padding: 10px;
 	background-color: rgb(71,125,170);
 	font-size: 25px;
+	position: relative;
+	top: -20px;
+	z-index: 1;
 }
 
 #nav{
@@ -69,16 +73,17 @@ color: rgb(71,125,170);
 
 #nav img{
 	width: 100%;
-	color: white;
+	position: relative;
 }
 
+
 #video{
-width: 100%;
-color: white;
-background-color: rgb(71,125,170);
-padding: 5px;
-margin-bottom: 5px;
-border-radius: 5px;
+	width: 100%;
+	color: white;
+	background-color: rgb(71,125,170);
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
 }
 
 #resources{
@@ -87,9 +92,32 @@ border-radius: 5px;
 	padding: 5px;
 	color: white;
 	margin-bottom: 20px;
-border-radius: 5px;
+	border-radius: 5px;
+}
+.whitetxt{
+	color: white;
+}
+#overlay{
+	width: 100%;
+	position: relative;
+	top:-240px;
+	text-align: center;
+}
+
+#overlay img{
+	width: 70px;
+	margin: 15px;
 
 }
+#overlay button{
+	display: block;
+	margin: auto;
+	width: 80%;
+	background-color: rgb(52,200,223);
+	border-radius: 5px;
+	padding: 5px;
+}
+
 #main{
 	width: 80%;
 	display: inline-block;
@@ -152,22 +180,30 @@ vertical-align: middle
 }
 
 #clientserver{
-margin-left: 250px;
+	margin-left: 250px;
 	width: 250px;
 }
 
 #bottombox{
-height: 200px;
+margin-top: 10px;
 	border: 3px solid rgb(0,130,223);
 }
 
 #bottombox img{
 	display: inline-block;
-	vertical-align: top;
-	width: 100px;
+	width: 120px;
 }
 
 #bottomtxt{
 	display: inline-block;
 	vertical-align: top;
+	width: 600px;
+}
+
+#bottomtxt p{
+	margin-bottom: 5px;
+}
+
+.bold{
+	font-weight: bold;
 }
