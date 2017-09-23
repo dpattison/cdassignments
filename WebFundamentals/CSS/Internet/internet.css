@@ -1,0 +1,207 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+#wrapper {
+	width: 970px;
+	height: 970px;
+	padding: 5px;
+}
+
+#header {
+	width: 970px;
+}
+
+#header img {
+	width: 100px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+}
+
+#header h1 {
+	display: inline-block;
+	font-size: 35px;
+}
+
+.bluetxt {
+	color: rgb(71, 125, 170);
+}
+
+#header h2 {
+	color: white;
+	width: 950px;
+	padding: 10px;
+	background-color: rgb(71, 125, 170);
+	font-size: 25px;
+	position: relative;
+	top: -20px;
+	z-index: 1;
+}
+
+#nav {
+	width: 17%;
+	height: 500px;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 20px;
+}
+
+.redtxt {
+	color: red;
+	font-weight: bold;
+}
+
+#nav h5 {
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#nav h6 {
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#nav img {
+	width: 100%;
+	position: relative;
+}
+
+#video {
+	width: 100%;
+	color: white;
+	background-color: rgb(71, 125, 170);
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+#resources {
+	width: 100%;
+	background-color: rgb(240, 123, 6);
+	padding: 5px;
+	color: white;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.whitetxt {
+	color: white;
+}
+
+#overlay {
+	width: 100%;
+	position: relative;
+	top: -240px;
+	text-align: center;
+}
+
+#overlay img {
+	width: 70px;
+	margin: 15px;
+}
+
+#overlay button {
+	display: block;
+	margin: auto;
+	width: 80%;
+	background-color: rgb(52, 200, 223);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#main {
+	width: 80%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#home {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;
+	width: 100px;
+}
+
+#home img {
+	width: 20px;
+	display: inline-block;
+	vertical-align: middle
+}
+
+#home h5 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#contact {
+	margin-left: 450px;
+	display: inline-block;
+}
+
+#contact img {
+	display: inline-block;
+	margin-top: 5px;
+	width: 50px;
+}
+
+#phone {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+#phone p {
+	font-size: 10px;
+}
+
+#phone h2 {
+	font-weight: bold;
+}
+
+.lblue {
+	color: rgb(0, 190, 222)
+}
+
+#content {
+	width: 100%;
+	border-top: 1px solid grey;
+}
+
+.txt14 {
+	font-size: 14px;
+}
+
+#clientserver {
+	margin-left: 250px;
+	width: 250px;
+}
+
+#bottombox {
+	margin-top: 10px;
+	border: 3px solid rgb(0, 130, 223);
+}
+
+#bottombox img {
+	display: inline-block;
+	width: 120px;
+}
+
+#bottomtxt {
+	display: inline-block;
+	vertical-align: top;
+	width: 600px;
+}
+
+#bottomtxt p {
+	margin-bottom: 5px;
+}
+
+.bold {
+	font-weight: bold;
+}
