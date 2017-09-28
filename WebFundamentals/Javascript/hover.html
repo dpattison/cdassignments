@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover Door</title>
+    <link rel="stylesheet" href="hover.css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('img').hover(function () {
+                $(this).attr('src', $(this).attr('alt-image'));
+            }, function () {
+                $(this).attr('src', $(this).attr('orig-image'));
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+    <img src="img/door1.jpg" alt="" orig-image="img/door1.jpg" alt-image="img/peep1.jpg">
+    <img src="img/door2.jpg" alt="" orig-image="img/door2.jpg" alt-image="img/peep2.jpg">
+    <img src="img/door3.jpg" alt="" orig-image="img/door3.jpg" alt-image="img/peep3.jpg">
+    <img src="img/door4.jpg" alt="" orig-image="img/door4.jpg" alt-image="img/peep4.jpg">
+    <img src="img/door5.jpg" alt="" orig-image="img/door5.jpg" alt-image="img/peep5.jpg">
+    <img src="img/door6.jpg" alt="" orig-image="img/door6.jpg" alt-image="img/peep6.jpg">
+    <img src="img/door7.jpg" alt="" orig-image="img/door7.jpg" alt-image="img/peep7.jpg">
+    <img src="img/door8.jpg" alt="" orig-image="img/door8.jpg" alt-image="img/peep8.jpg">
+
+
+</body>
+
+</html>
