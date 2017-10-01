@@ -14,6 +14,79 @@
                 alert("Handler for .click() called.");
             });
 
+            $('button.hide').click(function () {
+                $('#hide p').hide()
+            });
+
+            $('button.show').click(function () {
+                $('#show p').show()
+            });
+
+            $('button.toggle').click(function () {
+                $('#toggle p').toggle()
+            });
+
+            $('button.slideDown').click(function () {
+                $('#slideDown img').slideDown("slow")
+            });
+
+            $('button.slideUp').click(function () {
+                $('#slideUp img').slideUp("slow")
+            });
+
+            $('button.slideToggle').click(function () {
+                $('#slideToggle img').slideToggle("slow")
+            });
+
+            $('button.fadeIn').click(function () {
+                $('#fadeIn img').fadeIn("slow")
+            });
+
+            $('button.fadeOut').click(function () {
+                $('#fadeOut img').fadeOut("slow")
+            });
+
+            $('button.addClass').click(function () {
+                $('#addClass p').addClass("highlight")
+            });
+
+            $('button.before').click(function () {
+                $('#before p').before("<h1>Before</h1>")
+            });
+
+            $('button.after').click(function () {
+                $('#after p').after("<h1>after</h1>")
+            });
+
+            $('button.append').click(function () {
+                $('#append p').append("<strong>append</strong>")
+            });
+
+            $('button.html').click(function () {
+                var htmlstring = $('#html p').html();
+                $('#html p').append(htmlstring)
+            });
+
+            $('button.attr').click(function () {
+                var source = $('#attr img').attr("src");
+                alert(source);
+            });
+
+            $('button.val').click(function () {
+                alert($('#val input').val());
+
+            });
+
+            $('button.text').click(function () {
+                alert($('#text p').text());
+
+            });
+
+            $('button.data').click(function () {
+                $("#data p").data("test", { first: "dave", last: "pattison" });
+                var text = $("#data p").data("test").first + " " + $("#data p").data("test").last;
+                alert(text);
+            });
         })
     </script>
 </head>
@@ -26,88 +99,95 @@
     </div>
     <div id="hide">
         <h3>Hide</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="hide">Click</button>
+        <p>Click to hide this paragraph.</p>
     </div>
     <div id="show">
         <h3>Show</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="show">Click</button>
+        <p style="display: none">Now I'm here.</p>
     </div>
     <div id="toggle">
         <h3>Toggle</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="toggle">Click</button>
+        <p>Click to toggle this text.</p>
     </div>
     <div id="slideDown">
         <h3>Slide Down</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="slideDown">Click</button>
+        <p>Click to slide down</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="slideUp">
         <h3>Slide Up</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="slideUp">Click</button>
+        <p>Click to slide up.</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="slideToggle">
         <h3>Slide Toggle</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="slideToggle">Click</button>
+        <p>Click to toggle img.</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="fadeIn">
         <h3>Fade In</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="fadeIn">Click</button>
+        <p>Click to fade in.</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="fadeOut">
         <h3>Fade Out</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="fadeOut">Click</button>
+        <p>Click to fade out.</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="addClass">
         <h3>Add Class</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="addClass">Click</button>
+        <p>Click to add a class to highlight this text.</p>
     </div>
     <div id="before">
         <h3>Before</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="before">Click</button>
+        <p>Click to insert html before this paragraph.</p>
     </div>
     <div id="after">
         <h3>After</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="after">Click</button>
+        <p>Click to insert html after this paragraph.</p>
     </div>
     <div id="append">
         <h3>Append</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="append">Click</button>
+        <p>Click to append.</p>
     </div>
     <div id="html">
         <h3>HTML</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="html">Click</button>
+        <p>Click to append this html string.</p>
     </div>
     <div id="attr">
         <h3>ATTR</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="attr">Click</button>
+        <p>Click to show image source.</p>
+        <img src="images/kfc.jpg" alt="kfc">
     </div>
     <div id="val">
         <h3>Val</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="val">Click</button>
+        <p>Click to return text value in box.</p>
+        <input type="text" value="some text">
     </div>
     <div id="text">
         <h3>Text</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="text">Click</button>
+        <p>Click to how this text.</p>
     </div>
     <div id="data">
         <h3>Data</h3>
-        <button class="click">Click</button>
-        <p>Click to send an alert.</p>
+        <button class="data">Click</button>
+        <p>Click to show data for this element.</p>
     </div>
 </body>
 
