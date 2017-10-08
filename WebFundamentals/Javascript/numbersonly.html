@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function numbersOnly(array) {
+            var numberArray=[];
+            for (var i = 0; i < array.length; i++) {
+                if (typeof array[i] === "number") {
+                    numberArray.push(array[i]);
+                }
+            }
+            return (numberArray)
+        }
+        function noNumbers(array) {
+            var numberArray=[];
+            for (var i = 0; i < array.length; i++) {
+                if (typeof array[i] != "number") {
+                    numberArray.push(array[i]);
+                }
+            }
+            return (numberArray)
+        }
+        console.log(numbersOnly([1, "dave", 2, 2, "taco"]))
+        console.log(noNumbers([1, "dave", 2, 2, "taco"]))
+    </script>
+</body>
+</html>
