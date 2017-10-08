@@ -6,25 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dax's Pokemon Collection</title>
+    <link rel="stylesheet" type="text/css" href="pokedax.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script>
-         $(document).ready(function () {
+        $(document).ready(function () {
             for (var i = 1; i < 152; i++) {
-                var random = Math.floor((Math.random() * 151) + 1);
-                var pokeimg = '<img src="http://pokeapi.co/media/img/' + random + '.png">'
-                console.log(pokeimg)
+                
+                var pokeimg = '<img src="http://pokeapi.co/media/img/' + i + '.png" pid="' + i + '">'
+
                 $('#pokeimg').append(pokeimg);
 
-        }
+            }
+
+            $('img').click(function () {
+                var pid = $(this).attr("pid")
+                var imgurl = "http://pokeapi.co/media/img/" + pid + ".png";
+                var pokeapi = "https://pokeapi.co/api/v1/pokemon/" + pid + "/";
+                
+                // Blank out while loading
+                $('#name').html("<h1>loading..</h1>");
+                $('#types').html("<h3>Types</h3>");
+                $('#height').html("<h3>Height</h3><p></p>");
+                $('#weight').html("<h3>Weight</h3><p></p>");
+                
+                // call poke api
+                $.get(pokeapi, function (res) {
+                    
+                    // display name
+                    $('#name').html("<h1>" + res.name + "</h1>");
+                    
+                    // build html for types
+                    var types = "<h3>Types</h3><ul>";
+
+                    for (var i=0; i<res.types.length; i++){
+                        types += "<li>" + res.types[i].name + "</li>";
+                    }
+                    types += "</ul>";
+                    
+                    // display types
+                    $('#types').html(types);
+
+                    // display height
+                    $('#height').html("<h3>Height</h3><p>" + res.height + "</p>");
+
+                    //display weight
+                    $('#weight').html("<h3>Weight</h3><p>" + res.weight + "</p>");
+                   
+                }, "json");
+
+                // set picture
+                $('#pic').attr('src',imgurl);
+
+            })
+
+
         })
-         
     </script>
 </head>
 
 <body>
-    <h1>Dax's Pokemon Collection</h1>
     <div id="pokeimg"></div>
-
+    <div id="pokeinfo">
+        <div id="name">
+            <p>Click a pokemon to learn about it.</p>
+        </div>
+        <img id="pic" src=""  alt=" ">
+        <div id="types"></div>
+        <div id="height"></div>
+        <div id="weight"></div>
+    </div>
 </body>
-
-</html>dwa
+</html>
