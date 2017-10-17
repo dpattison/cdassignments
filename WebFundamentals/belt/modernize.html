@@ -11,9 +11,15 @@
             margin: 0px;
             padding: 0px;
             color: white;
-            background-color: black;
-            /* border: 1px solid white; */
             font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .border {
+            border: 1px solid white;
+        }
+
+        body {
+            background-color: rgb(26, 26, 26);
         }
 
         #container {
@@ -23,21 +29,18 @@
         #header {
             width: 1000px;
             height: 100px;
-            background-color: rgb(26, 26,26);
         }
 
         #header image {
             margin-top: 10px;
             height: 75px;
             display: inline-block;
-
         }
 
         #header h3 {
             margin: 20px 0 0 500px;
             vertical-align: top;
             display: inline-block;
-            background-color: rgb(26, 26,26);
         }
 
         #menu {
@@ -50,7 +53,6 @@
         #menu ul {
             list-style-type: none;
             background-color: grey;
-            
         }
 
         #menu ul li {
@@ -60,32 +62,102 @@
             padding-right: 20px;
         }
 
-        #banner{
+        #banner {
             width: 1000px;
         }
 
         #links {
             width: 1000px;
-            height: 100px;
+            height: 150px;
+            padding: 30px;
+        }
+
+        .subject {
+            width: 200px;
+            display: inline-block;
+            margin-right: 30px;
         }
 
         #buy {
-            width: 1000px;
-            height: 100px;
+            width: 900px;
+            height: 80px;
+            background-color: black;
+            padding: 50px;
+        }
+
+        #buytext {
+            width: 75%;
+            display: inline-block;
+        }
+
+        #buytext h2 {
+            margin-bottom: 10px;
+        }
+
+        #buynow {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 80px;
+            margin-top: 10px;
+            width: 130px;
+            height: 50px;
+            background-color: rgb(240, 137, 61);
+            border-radius: 5px;
+            font-size: 20px;
+            border: none;
         }
 
         #portfolio {
             width: 1000px;
             height: 300px;
+            padding: 20px;
+        }
+
+        
+        #porthead{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        
+        #porthead h2{
+            display: inline-block;
+        }
+
+        #porthead h3{
+            display: inline-block;
+            margin-left: 650px;
+        }
+
+        .portitem {
+            width: 23%;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .portitem img{
+            border: 5px solid grey;
+        }
+
+        .portitem h3{
+            color: rgb(240, 137, 61);
+            padding: 10px 0;
+        }
+
+        #btt{
+            text-align: right;
+            margin-top: 40px;
+            margin-right: 40px;
+            color: grey;
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
     <div id="container">
-        <div id="header">
+        <div id="header" class="greybak">
             <img src="modlogo.png" alt="logo">
-            <h3>Call Us: (66)8 234 678</h3>
+            <h3 class="greybak">Call Us: (66)8 234 678</h3>
         </div>
         <div id="menu">
             <ul>
@@ -98,9 +170,79 @@
             </ul>
         </div>
         <img id="banner" src="banner.png" alt="banner">
-        <div id="links">Links</div>
-        <div id="buy">Buy</div>
-        <div id="portfolio">Portfolio</div>
+        <div id="links" class="greybak">
+            <div class="subject border">
+                <img class="border" src="cloud.png" alt="cloud">
+                <div class="border">
+                    <h3>Ridiculus Ornare</h3>
+                    <p>Aenean eu leo quam. Pelien tesque ornare sem lacinia qua venenatis vestibulum.</p>
+                </div>
+            </div>
+            <div class="subject border">
+                <img class="border" src="cloud.png" alt="cloud">
+                <div class="border">
+                    <h3>Ridiculus Ornare</h3>
+                    <p>Aenean eu leo quam. Pelien tesque ornare sem lacinia qua venenatis vestibulum.</p>
+                </div>
+            </div>
+            <div class="subject border">
+                <img class="border" src="cloud.png" alt="cloud">
+                <div class="border">
+                    <h3>Ridiculus Ornare</h3>
+                    <p>Aenean eu leo quam. Pelien tesque ornare sem lacinia qua venenatis vestibulum.</p>
+                </div>
+            </div>
+            <div class="subject border">
+                <img class="border" src="cloud.png" alt="cloud">
+                <div class="border">
+                    <h3>Ridiculus Ornare</h3>
+                    <p>Aenean eu leo quam. Pelien tesque ornare sem lacinia qua venenatis vestibulum.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="buy">
+            <div id="buytext">
+                <h2>Bibendum Fusce Vehicula Ullamcorper Fermentrum</h2>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacina bibendum nulla sed consectetur.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris.</p>
+            </div>
+            <button id="buynow">Buy Now</button>
+
+        </div>
+        <div id="portfolio">
+            <div id="porthead">
+                <h2>Portfolio</h2>
+                <h3>View All Projects -></h3>
+            </div>
+            <div class="portitem">
+                <img src="jump.png" alt="">
+                <h3>Built-in Shortcode</h3>
+                <p>You can easily use shortcode via icons in text editor. Easy! Cras mattis consectetur purus sit amet fermentum.
+                    Vestibulum id ligula porta fellis euismo</p>
+            </div>
+            <div class="portitem">
+                <img src="bus.png" alt="bus">
+                <h3>Built-in Shortcode</h3>
+                <p>You can easily use shortcode via icons in text editor. Easy! Cras mattis consectetur purus sit amet fermentum.
+                    Vestibulum id ligula porta fellis euismo</p>
+            </div>
+            <div class="portitem">
+                <img src="couple.png" alt="couple">
+                <h3>Built-in Shortcode</h3>
+                <p>You can easily use shortcode via icons in text editor. Easy! Cras mattis consectetur purus sit amet fermentum.
+                    Vestibulum id ligula porta fellis euismo</p>
+            </div>
+            <div class="portitem">
+                <img src="city.png" alt="city">
+                <h3>Built-in Shortcode</h3>
+                <p>You can easily use shortcode via icons in text editor. Easy! Cras mattis consectetur purus sit amet fermentum.
+                    Vestibulum id ligula porta fellis euismo</p>
+            </div>
+            <p id="btt">Back To Top</p>
+        </div>
     </div>
 
 
