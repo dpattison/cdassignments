@@ -4,7 +4,7 @@ app = Flask(__name__)                     # Global variable __name__ tells Flask
 
 @app.route('/')                           # The "@" symbol designates a "decorator" which attaches the
 def hello_world():
-  return render_template('index.html')    # Render the template and return it!
+  return render_template('index.html', name='Dave')    # Render the template and return it!
 
 
 @app.route('/success')
