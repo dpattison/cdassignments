@@ -8,7 +8,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/process', methods=['POST'])
+@app.route('/result', methods=['POST'])
 def create_user():
     name = request.form['name']
     location = request.form['location']

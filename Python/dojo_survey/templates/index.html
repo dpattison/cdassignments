@@ -6,22 +6,26 @@
 
 <body>
 
-  <form action="/process" method="post">
+  <form action="/result" method="post">
     <p>Your Name:
       <input type="text" name="name">
     </p>
     <p>Dojo Location:
-      <input type="text" name="location">
+      <select name="location">
+        <option value="Online">Online</option>
+        <option value="San Jose">San Jose</option>
+        <option value="Seattle">Seattle</option>
+      </select>
     </p>
     <p>Favorite Language:
       <select name="language">
-        <option value="python">Python</option>
-        <option value="java">Java</option>
-        <option value="c#">C#</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C#">C#</option>
       </select>
     </p>
     <p>Comment (optional):</p>
-      <p><textarea name="comment"></textarea></p>
+      <p><textarea name="comment" rows="10" cols="30"></textarea></p>
     
     <input type="submit" value="Submit">
     <input type="reset">
