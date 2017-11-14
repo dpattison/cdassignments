@@ -8,6 +8,7 @@ app.secret_key = 'ThisIsSecret'
 
 randnum = random.randrange(0, 101)
 
+
 @app.route('/')
 def index():
     session['randnum'] = randnum
@@ -17,13 +18,13 @@ def index():
 def guess():
     if int(request.form['guess']) == session['randnum']:
         session.pop('randnum')
-        session['answer'] = "Correct"
+        session['guess'] = "Correct"
         return redirect('/')
     elif int(request.form['guess']) > session['randnum']:
-        session['answer'] = "Too high!"
+        session['guess'] = "Too high!"
         return redirect('/')
     elif int(request.form['guess']) < session['randnum']:
-        session['answer'] = "Too low!"
+        session['guess'] = "Too low!"
         return redirect('/')
 
 
