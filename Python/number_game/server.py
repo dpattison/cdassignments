@@ -1,11 +1,12 @@
+import random
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
 app.secret_key = 'ThisIsSecret'
 
-import random
 
-randnum = random.randrange(0,101)
+
+randnum = random.randrange(0, 101)
 
 @app.route('/')
 def index():
@@ -14,12 +15,16 @@ def index():
 
 @app.route('/guess', methods=['POST'])
 def guess():
-    session['guess'] = request.form['guess']
-    return redirect('/')
+    if int(request.form['guess']) == session['randnum']:
+        session.pop('randnum')
+        session['answer'] = "Correct"
+        return redirect('/')
+    elif int(request.form['guess']) > session['randnum']:
+        session['answer'] = "Too high!"
+        return redirect('/')
+    elif int(request.form['guess']) < session['randnum']:
+        session['answer'] = "Too low!"
+        return redirect('/')
 
-# @app.route('/reset', methods=['POST'])
-# def reset():
-#     session['counter'] = 0
-#     return redirect('/')
 
 app.run(debug=True)
