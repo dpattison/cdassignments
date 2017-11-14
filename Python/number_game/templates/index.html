@@ -1,7 +1,8 @@
 <html>
 
 <head>
-  <title>Counter</title>
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_sheet.css')}}">
 </head>
 
 <body>
@@ -10,10 +11,22 @@
   <p>Take a guess!</p>
   <h3>{{session['randnum']}}</h3>
   <form action="/guess" method="post">
-    <input type="text" name="guess">    
+    <input type="text" name="guess">
     <input type="submit" value="Submit">
   </form>
-  <h3>{{session['guess']}}</h3>
+
+
+  {% if answer=="Correct" %}
+  <h3>{{ answer }}</h3>
+  <form action="/">
+  <input type="submit" value="Play Again!">
+  </form>
+  {% elif answer=="Too high!"%}
+  <h3>{{ answer }}</h3>
+  {% elif answer=="Too low!"%}
+  <h3>{{ answer }}</h3>
+  {% endif %}
+
 </body>
 
 </html>
