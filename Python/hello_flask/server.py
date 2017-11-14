@@ -1,4 +1,4 @@
-from flask import Flask, render_template  # Import Flask to allow us to create our app, and import
+from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)                     # Global variable __name__ tells Flask whether or not we
 
