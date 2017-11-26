@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<<<<<<< HEAD
   <title>Number Game</title>
 </head>
 
@@ -12,6 +13,33 @@
     <input type="submit" value="Submit">
   </form>
 
+=======
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_sheet.css')}}">
+</head>
+
+<body>
+  <h3>Welcom to the Great Number Game!</h3>
+  <p>I am thinking of a number between 1 and 100</p>
+  <p>Take a guess!</p>
+  <form action="/guess" method="post">
+    <input type="text" name="guess">
+    <input type="submit" value="Submit">
+  </form>
+
+
+  {% if answer=="Correct" %}
+  <h3>{{ answer }}</h3>
+  <form action="/">
+  <input type="submit" value="Play Again!">
+  </form>
+  {% elif answer=="Too high!"%}
+  <h3>{{ answer }}</h3>
+  {% elif answer=="Too low!"%}
+  <h3>{{ answer }}</h3>
+  {% endif %}
+
+>>>>>>> d2e4d0b1b63c6bca9248952c9ff4289ba2582393
 </body>
 
 </html>
