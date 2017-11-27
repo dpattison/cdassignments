@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Email Validation</title>
+</head>
+<style>
+.alert {
+  color: white;
+  background-color: red;
+  border: 1px solid black;
+  width: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+} 
+</style>
+
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class='alert'>{{message}}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action='/process' method='POST'>
+        <label for="email">Email Address:
+            <input type="text" name="email" id="email">
+        </label>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
