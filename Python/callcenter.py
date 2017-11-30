@@ -14,8 +14,8 @@ class call(object):
         print "Reason: " + self.reason
         return self
 
-call1 = call(1, "Dave", "805-252-7999", "10:15am", "unhappy")
-call2 = call(2, "Fred", "805-555-555", "10:15am", "unhappy")
+call1 = call(1, "Dave", "805-252-7999", "10:16am", "unhappy")
+call2 = call(2, "Fred", "805-555-5555", "10:10am", "unhappy")
 # call1.display()
 
 class callcenter(object):
@@ -36,6 +36,7 @@ class callcenter(object):
         for each in self.calls:
             print "Name: " + each.caller_name
             print "Phone: " + each.caller_phone
+            print "Time: " + each.time
             print
         return self
     def removecall(self, phonenum):
@@ -44,10 +45,14 @@ class callcenter(object):
                 self.calls.remove(call)
                 self.queue_size -= 1
         return self
+    def sortbytime(self):
+        self.calls = sorted(self.calls, key = lambda call: call.time)
 
 cc1 = callcenter()
 cc1.add(call1).add(call2)
 cc1.info()
-
-cc1.removecall("805-252-7999")
+cc1.sortbytime()
 cc1.info()
+
+# cc1.removecall("805-252-7999")
+# cc1.info()
