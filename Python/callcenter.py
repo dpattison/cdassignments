@@ -16,7 +16,7 @@ class call(object):
 
 call1 = call(1, "Dave", "805-252-7999", "10:15am", "unhappy")
 call2 = call(2, "Fred", "805-555-555", "10:15am", "unhappy")
-call1.display()
+# call1.display()
 
 class callcenter(object):
     def __init__(self):
@@ -35,12 +35,19 @@ class callcenter(object):
         print "Calls in Queue: " + str(self.queue_size)
         for each in self.calls:
             print "Name: " + each.caller_name
-            print "PHone: " + each.caller_phone
+            print "Phone: " + each.caller_phone
+            print
+        return self
+    def removecall(self, phonenum):
+        for call in self.calls:
+            if call.caller_phone == phonenum:
+                self.calls.remove(call)
+                self.queue_size -= 1
         return self
 
 cc1 = callcenter()
 cc1.add(call1).add(call2)
 cc1.info()
 
-
-
+cc1.removecall("805-252-7999")
+cc1.info()
