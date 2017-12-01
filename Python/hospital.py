@@ -21,15 +21,24 @@ class hospital(object):
             patient.bednumber = self.available_beds.pop(0)
             print patient.name + " has been admitted to bed " + str(patient.bednumber)
         return self
+    def discharge(self, patient):
+        self.patients.remove(patient)
+        self.available_beds.append(patient.bednumber)
+        print patient.name + " has left the hospital. Bed " + str(patient.bednumber) + " is available."
+        patient.bednumber = 0
+        return self
 
 dave = patient(1, "Dave", "none")
 fred = patient(2, "Fred", "none")
 mike = patient(3, "Mike", "none")
 jimmy = patient(4, "Jimmy", "none")
+rex = patient(5, "Rex", "none")
 
 mlk = hospital("MLK", 3)
 
-mlk.admit(dave).admit(fred).admit(mike).admit(jimmy)
+mlk.admit(dave).admit(fred).admit(mike).admit(jimmy).discharge(dave).admit(rex)
+
+
 
 
 
