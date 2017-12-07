@@ -7,10 +7,10 @@ def index(request):
     context = {
         "random": get_random_string(length=14)
         }
+    counter = request.session.get('count', 0)
+    counter += 1
+    request.session['count'] = counter
     return render(request,'random_word/index.html', context)
 def reset(request):
-    context = {
-        "date": "reset time",
-        "time": strftime("%I:%M %p", localtime())
-        }
-    return render(request,'random_word/index.html', context)
+    request.session['count'] = 0
+    return redirect('random_word:index')
