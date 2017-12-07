@@ -19,6 +19,7 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('time_display/', include('apps.time_display.urls')),
-    url('random_word/', include('apps.random_word.urls'))
+    path('time_display/', include('apps.time_display.urls')),
+    path('blogs/', include('apps.blogs_app.urls')),
+    path('random_word/', include('apps.random_word.urls'))
 ]

@@ -1,10 +1,12 @@
-from django.conf.urls import url
+from django.urls import include, path
 from . import views
+
+app_name = 'blogs_app'
 urlpatterns = [
-    url(r'^$', views.index),
-    url(r'^new', views.new),
-    url(r'^create', views.create),
-    url(r'^\d+$', views.show),
-    url(r'^\d+/edit', views.edit),
-    url(r'^\d+/delete', views.destroy)
+    path('', views.index, name='index'),
+    path('new/', views.new),
+    path('create/', views.create),
+    path('<int:blog_id>/', views.show),
+    path('<int:blog_id>/edit/', views.edit),
+    path('<int:blog_id>/delete/', views.destroy)
 ]
