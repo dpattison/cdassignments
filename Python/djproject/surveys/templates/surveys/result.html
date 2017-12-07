@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box {
+            margin: 10px auto;
+            width: 40%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .top {
+            background: rgb(190, 233, 190);
+        }
+
+        .ul {
+            text-decoration: underline;
+        }
+
+        .label {
+            width: 150px;
+            padding-right: 20px;
+            padding-left: 10px;
+            display: inline-block;
+        }
+
+        form {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box top">
+        <h3>Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.</h3>
+    </div>
+    <div class="box">
+        <h3 class="ul">Submitted Information</h3>
+        <p>
+            <div class="label">Name:</div>{{request.session.name}}</p>
+        <p>
+            <div class="label">Dojo Location:</div>{{request.session.location}}</p>
+        <p>
+            <div class="label">Favorite Language:</div>{{request.session.language}}</p>
+        <p>
+            <div class="label">Comment:</div>{{request.session.comment}}</p>
+            <form action="../" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Go Back">
+            </form>
+    </div>
+    
+</body>
+
+</html>
