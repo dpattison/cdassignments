@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        .left {
+            width: 400px;
+            height: 600px;
+            border-right: 2px solid black;
+            padding-left: 20px;
+            display: inline-block;
+        }
+
+        .right {
+            display: inline-block;
+            height: 600px;
+            width: 400px;
+            padding: 20px;
+            vertical-align: top;
+
+        }
+
+        .blueback {
+            background: lightskyblue;
+        }
+
+        .redback {
+            background: lightcoral;
+        }
+
+        input[type=text] {
+            width: 300px;
+        }
+        label {
+            width: 100px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <form action="process/" method="POST">
+            {% csrf_token %}
+            <h2>Add a new word</h2>
+            <p>
+                <input type="text" name="word">
+            </p>
+            Choose color
+            <br>
+            <input type="radio" name="color" value="red"> Red
+            <br>
+            <input type="radio" name="color" value="green"> Green
+            <br>
+            <input type="radio" name="color" value="blue"> Blue
+            <br>
+            <p>
+                <input type="checkbox" name="big" value="big"> show in BIG fonts!</p>
+            <input class="blueback" type='submit' value='Add to Session'>
+        </form>
+
+    </div>
+
+    <div class="right">
+        <form action="clear/" method="POST">
+            {% csrf_token %}
+            <input class="redback" type='submit' value='Clear Session'>
+        </form>
+
+        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+    </div>
+
+
+</body>
+
+</html>
