@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'surveys',
     'session_words',
+    'amadon',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

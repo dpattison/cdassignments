@@ -32,10 +32,30 @@
         input[type=text] {
             width: 300px;
         }
-        label {
-            width: 100px;
+
+        span {
+            width: 150px;
             padding-right: 20px;
         }
+
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: green;
+        }
+
+        .big {
+            font-size: 30px;
+        }
+
+        .small {
+            font-size: 15px;
+        }
+
     </style>
 </head>
 
@@ -49,14 +69,15 @@
             </p>
             Choose color
             <br>
-            <input type="radio" name="color" value="red"> Red
+            <input type="radio" name="color" value="red" checked> Red
             <br>
             <input type="radio" name="color" value="green"> Green
             <br>
             <input type="radio" name="color" value="blue"> Blue
             <br>
             <p>
-                <input type="checkbox" name="big" value="big"> show in BIG fonts!</p>
+                <input type="hidden" name="size" value="small">
+                <input type="checkbox" name="size" value="big"> show in BIG fonts!</p>
             <input class="blueback" type='submit' value='Add to Session'>
         </form>
 
@@ -68,11 +89,12 @@
             <input class="redback" type='submit' value='Clear Session'>
         </form>
 
-        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
-        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
-        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
-        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
-        <p><label>Django</label> -added on 9:15:30pm, June 5th 2017</p>
+        {% for word in request.session.words %}
+
+        <p>
+            <span class="{{ word.color }} {{ word.size }}">{{ word.word }}</span> added on {{ word.time }}</p>
+
+        {% endfor %}
     </div>
 
 
