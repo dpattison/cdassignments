@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('surveys/', include('surveys.urls')),
     path('session_words/', include('session_words.urls')),
-    path('amadon/', include('amadon.urls'))
+    path('amadon/', include('amadon.urls')),
+    path('ninjagold/', include('ninjagold.urls'))
 ]
