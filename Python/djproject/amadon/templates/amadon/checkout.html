@@ -4,13 +4,22 @@
 
 <head>
     <style>
+        body {
 
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            padding: 15px;
+        }
 
     </style>
 </head>
 
 <body>
-{{ request.session.product_id }} {{ request.session.quantity }}
+ <h3>Than you for your business!</h3>
+
+ <p>We charged your credit card ${{ request.session.total }} </p>
+ <p>You have ordered {{ request.session.items_ordered }} item(s) so far and spent ${{ request.session.total_ordered|stringformat:".2f" }} with Amadon!</p>
+
+ <a href="../">Go back</a>
 
 
 </body>
