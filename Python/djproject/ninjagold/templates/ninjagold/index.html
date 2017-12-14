@@ -34,10 +34,17 @@
             border: 1px solid darkblue;
             width: 880px;
             height: 200px;
-
+            padding-left: 20px;
             margin: 10px;
+            overflow: auto;
+        }
 
+        .win {
+            color: green;
+        }
 
+        .lose {
+            color: red;
         }
     </style>
 </head>
@@ -86,8 +93,18 @@
             </div>
             <p>Activities:</p>
             <div class="activities">
-
+                {% for message in request.session.messages %}
+                    {% if "lost" in message %}
+                    <p class="lose">{{ message }}</p>
+                    {% else %}
+                    <p class="win">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}
             </div>
+            <form action='/ninjagold/reset/' method='post'>
+                {% csrf_token %}
+                <input type='submit' value='Start Over' />
+            </form>
         </div>
 
 </body>

@@ -12,7 +12,7 @@ def index(request):
 
 def processmoney(request):
     total_gold = request.session['total_gold']
-    # messages = request.session.get('messages', ())
+    messages = request.session.get('messages', [])
     location = (request.POST['location'])
     if location == "farm":
         gold = randint(10, 20)
@@ -24,10 +24,12 @@ def processmoney(request):
         gold = randint(-50, 50)
     total_gold += gold
     request.session['total_gold'] = total_gold
+    time = strftime("%I:%M %p %b %d, %Y", localtime())
     if gold > 0:
-        print("Earned " + str(gold) + " from the " + location + "!")
+        messages.insert(0,"Earned " + str(gold) + " gold from the " + location + "! (" + time + ")")
     else:
-        print("Entered a casino and lost " + str(gold) + " gold.. Ouch!")
+        messages.insert(0,"Entered a casino and lost " + str(abs(gold)) + " gold.. Ouch! (" + time + ")")
+    request.session['messages'] = messages
     return redirect('ninjagold:index')
 
 
