@@ -6,8 +6,8 @@ from random import randint
 
 def index(request):
     total_gold = request.session.get('total_gold', 0)
-    print (total_gold)
-    return render(request, 'ninjagold/index.html')
+    request.session['total_gold'] = total_gold
+    return render(request, 'ninjagold/index.html', )
 
 
 def processmoney(request):
@@ -28,7 +28,6 @@ def processmoney(request):
         print("Earned " + str(gold) + " from the " + location + "!")
     else:
         print("Entered a casino and lost " + str(gold) + " gold.. Ouch!")
-    print(total_gold)
     return redirect('ninjagold:index')
 
 
