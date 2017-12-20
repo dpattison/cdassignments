@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        
+        body {
+            padding: 10px;
+        }
+        
+        h3, a, p {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>User {{ user.id }}</h3>
+    <p>Full Name: {{ user.first_name }} {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Created at: {{ user.created_at }}</p>
+    <a href="{{user.id}}/edit">Edit</a> | <a href="{{user.id}}/destroy">Delete</a> | <a href="./">Home</a>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        h3,
+        a,
+        p {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Edit User {{ user.id }}</h3>
+    <form action="update/" method="POST">
+        {% csrf_token %}
+        <p>First name:
+            <br>
+            <input type="text" name="first_name" value="{{ user.first_name }}">
+        </p>
+
+        <p>Last name:
+            <br>
+            <input type="text" name="last_name" value="{{ user.last_name }}">
+        </p>
+
+        <p>Email:
+            <br>
+            <input type="text" name="email" value="{{ user.email }}">
+        </p>
+
+        <p><input type="submit" value="Update"></p>
+    </form>
+    <a href="../">Go Back</a>
+
+
+
+</body>
+
+</html>
+
+<!-- <form action="process/" method="POST">
+    {% csrf_token %}
+    <h2>Add a new word</h2>
+    <p>
+        <input type="text" name="word">
+    </p>
+    Choose color
+    <br>
+    <input type="radio" name="color" value="red" checked> Red
+    <br>
+    <input type="radio" name="color" value="green"> Green
+    <br>
+    <input type="radio" name="color" value="blue"> Blue
+    <br>
+    <p>
+        <input type="hidden" name="size" value="small">
+        <input type="checkbox" name="size" value="big"> show in BIG fonts!</p>
+    <input class="blueback" type='submit' value='Add to Session'>
+</form> -->
