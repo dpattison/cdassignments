@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', courses_views.index, name='index'),
     path('create/', courses_views.create, name='create'),
-    path('<int:id>/destroy', courses_views.destroy, name='destroy')
+    path('destroy/<int:id>', courses_views.destroy, name='destroy'),
+    path('delete/<int:id>', courses_views.delete, name='delete')
 ]

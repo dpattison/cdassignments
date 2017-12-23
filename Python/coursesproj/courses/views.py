@@ -13,6 +13,10 @@ def create(request):
     return redirect('index')
 
 def destroy(request, id):
+    return render(request, 'courses/remove.html', { "course": Course.objects.get(id = id)})
+
+
+def delete(request, id):
     course = Course.objects.get(id = id)
     course.delete()
     return redirect('index')

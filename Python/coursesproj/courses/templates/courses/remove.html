@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        h3,
+        a {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+
+        #users {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        #users td,
+        #users th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #users tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #users tr:hover {
+            background-color: #ddd;
+        }
+
+        #users th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .grey {
+            background-color: grey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>Are you sure you want to delete the following course?</h3>
+    <p>Name: {{ course.name }} </p>
+    <p>Description: {{ course.description }} </p>
+    <a class ="grey button" href="../">No</a> <a class = "red button" href="../delete/{{ course.id }}">Yes, I want to delete this</a>
+
+
+</body>
+
+</html>
