@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register or Login</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+    
+        h3 {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+    
+        form {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            text-align: right;
+            width: 300px;
+
+        }
+
+        .button {
+            background-color:rgb(36, 105, 148);
+            color: white;
+        }
+        </style>
+    
+ 
+</head>
+
+<body>
+    <h3>Registration</h3>
+    <form action="register/" method="POST">
+        {% csrf_token %}
+        <p>First Name: <input type="text" name="first_name"></p>
+        <p>Last Name: <input type="text" name="last_name"></p>
+        <p>Email: <input type="text" name="email"></p>
+        <p>Password: <input type="text" name="password"></p>
+        <p>Confirm pw: <input type="text" name="confirm_password"></p>
+        <p><input class="button" type="submit" value="Register"></p>
+    </form>
+    <h3>Login</h3>
+    <form action="login/" method="POST">
+        {% csrf_token %}
+        <p>Email: <input type="text" name="email"></p>
+        <p>Password: <input type="text" name="password"></p>
+        <p><input class="button" type="submit" value="Login"></p>
+    </form>
+</body>
+
+</html>
+
+
+
