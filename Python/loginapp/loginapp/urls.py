@@ -22,5 +22,6 @@ urlpatterns = [
     path('', login_views.index, name='index'),
     path('register/', login_views.register, name='register'),
     path('login/', login_views.login, name='login'),
-    path('success/', login_views.success, name='success')
+    path('success/', login_views.success, name='success'),
+     path('<int:id>/destroy', login_views.destroy, name='destroy'),
 ]

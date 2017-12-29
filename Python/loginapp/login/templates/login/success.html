@@ -16,8 +16,12 @@
             margin-left: 10px;
         }
 
-        p {
+        .success {
             color: green;
+        }
+
+        .error {
+            color: red;
         }
     
        
@@ -27,8 +31,19 @@
 </head>
 
 <body>
-    <h2>Success! Welcom, Andrew!</h2>
-    <p>Successfully registered (or logged in)!</p>
+
+    <h2>Welcome</h2>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <a href="../">Home</a>
+
+
+    
 </body>
 
 </html>

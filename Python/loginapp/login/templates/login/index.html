@@ -11,7 +11,7 @@
             padding: 10px;
         }
     
-        h3 {
+        h3, table, li {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             margin-left: 10px;
         }
@@ -28,6 +28,15 @@
             background-color:rgb(36, 105, 148);
             color: white;
         }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+    
         </style>
     
  
@@ -40,8 +49,8 @@
         <p>First Name: <input type="text" name="first_name"></p>
         <p>Last Name: <input type="text" name="last_name"></p>
         <p>Email: <input type="text" name="email"></p>
-        <p>Password: <input type="text" name="password"></p>
-        <p>Confirm pw: <input type="text" name="confirm_password"></p>
+        <p>Password: <input type="password" name="password"></p>
+        <p>Confirm pw: <input type="password" name="confirm_password"></p>
         <p><input class="button" type="submit" value="Register"></p>
     </form>
     <h3>Login</h3>
@@ -51,6 +60,35 @@
         <p>Password: <input type="text" name="password"></p>
         <p><input class="button" type="submit" value="Login"></p>
     </form>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+    <h3>Users</h3>
+    <table id="users">
+        <tr>
+            <th>id</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td><a href="{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a></td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at }}</td>
+                <td><a href="{{ user.id }}/destroy">Delete</a></td>
+        {% endfor %}
+        </tr>
+    </table>
+
 </body>
 
 </html>
