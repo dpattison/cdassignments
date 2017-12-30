@@ -23,5 +23,6 @@ urlpatterns = [
     path('register/', login_views.register, name='register'),
     path('login/', login_views.login, name='login'),
     path('success/', login_views.success, name='success'),
-     path('<int:id>/destroy', login_views.destroy, name='destroy'),
+    path('users/', login_views.users, name='users'),
+    path('users/<int:id>/destroy', login_views.destroy, name='destroy'),
 ]

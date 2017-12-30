@@ -6,7 +6,10 @@ import bcrypt
 
 # Create your views here.
 def index(request):
-    return render(request, 'login/index.html', { "users": User.objects.all() })
+    return render(request, 'login/index.html')
+
+def users(request):
+    return render(request, 'login/users.html', { "users": User.objects.all() })
 
 def register(request):
     pw = request.POST['password']
@@ -21,22 +24,21 @@ def register(request):
             messages.error(request, user.email + ' already exists')
             return redirect('index')
         except:
-            hash = bcrypt.hashpw(pw.encode(), bcrypt.gensalt())
-            new_user = User.objects.create(first_name=request.POST['first_name'], last_name=request.POST['last_name'], email=email, password=hash)
-            messages.info(request, hash)
+            hashedpw = bcrypt.hashpw(pw.encode('UTF-8'), bcrypt.gensalt())
+            User.objects.create(first_name=request.POST['first_name'], last_name=request.POST['last_name'], email=email, password=hashedpw)
+            request.session['first_name'] = request.POST['first_name']
             messages.success(request, 'Sucessfully registered')
             return redirect('success')
 
 def login(request):
     email = request.POST['email']
-    pw = request.POST['password']
     try:
         user = User.objects.get(email=email)
     except:
         messages.error(request, email + ' is not registered')
-        return redirect('index')
-
-    if bcrypt.checkpw(pw.encode(), user.password):
+        return redirect('index')   
+    if bcrypt.checkpw(request.POST['password'].encode('UTF-8'), user.password):
+        request.session['first_name'] = user.first_name
         messages.success(request, 'Sucessfully logged in')
         return redirect('success')
     else:
@@ -49,5 +51,5 @@ def success(request):
 def destroy(request, id):
     user = User.objects.get(id = id)
     user.delete()
-    return redirect('index')
+    return redirect('users')
 
