@@ -12,10 +12,6 @@ def register(request):
     pw = request.POST['password']
     confirmpw = request.POST['confirm_password']
     email = request.POST['email']
-
-    
-        
-
     if (confirmpw != pw):
         messages.error(request, 'Passwords do not match')
         return redirect('index')
@@ -40,7 +36,7 @@ def login(request):
         messages.error(request, email + ' is not registered')
         return redirect('index')
 
-    if bcrypt.checkpw(pw.encode(), user.password.encode()):
+    if bcrypt.checkpw(pw.encode(), user.password):
         messages.success(request, 'Sucessfully logged in')
         return redirect('success')
     else:
